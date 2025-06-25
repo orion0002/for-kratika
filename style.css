@@ -1,0 +1,242 @@
+body {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+body {
+  background: radial-gradient(ellipse at bottom, #1a1a1a 0%, #000000 100%);
+  background-attachment: fixed;
+  color: #ffccff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.main-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.digital-box {
+  background: #111;
+  border: 3px solid #0ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff80;
+  width: 300px;
+  text-align: center;
+}
+
+.digital-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ff99cc;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff66cc55;
+  backdrop-filter: blur(6px);
+  width: 300px;
+  text-align: center;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+
+#nextBtn {
+  background-color: #0ff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+}
+
+.hover-emojis {
+  display: none;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  background: #222;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#nextBtn:hover .hover-emojis {
+  display: block;
+}
+
+.gif-box img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 3px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffff60;
+}
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('3d-soft-pink-love-heart-valentines-day_1017-36321.avif') no-repeat center;
+  background-size: contain;
+  animation: float 8s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 0.9; transform: scale(1.1); }
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+.digital-box {
+  /* existing styles... */
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px #ff66cc88;
+  }
+  50% {
+    box-shadow: 0 0 40px #ff66cccc;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff66cc88;
+  }
+}
+#nextBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+#nextBtn {
+  background-color: #ff69b4; /* Hot pink */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  box-shadow: 0 0 10px #ff69b470, 0 0 20px #ff69b450;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+#nextBtn:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05);
+}
+
+
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+.background-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* stays behind everything */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-hearts span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('il_1080xN.3324023994_dcbf.avif') no-repeat center;
+  background-size: contain;
+  filter: drop-shadow(0 0 15px #ff69b4aa);
+  opacity: 0.3;
+  animation: blink 3s ease-in-out infinite alternate;
+}
+
+/* individual positions (scatter effect) */
+.background-hearts span:nth-child(1) {
+  top: 10%;
+  left: 15%;
+}
+.background-hearts span:nth-child(2) {
+  top: 25%;
+  left: 70%;
+}
+.background-hearts span:nth-child(3) {
+  top: 50%;
+  left: 30%;
+}
+.background-hearts span:nth-child(4) {
+  top: 65%;
+  left: 80%;
+}
+.background-hearts span:nth-child(5) {
+  top: 85%;
+  left: 10%;
+}
+
+/* blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
